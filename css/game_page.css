@@ -1,0 +1,25 @@
+#gamePage {
+  margin-top: 37px;
+  margin-bottom: 19.5px;
+  font-family: Arial;
+}
+
+#gamePage button {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5vw 1vw;
+  font-size: 1vw;
+  text-transform:uppercase;
+  font-weight: 100%;
+  transition: all 300ms ease-in-out;
+  position: absolute;
+  right: 18rem;
+  bottom: 8rem;
+}
+
+#gamePage .buttons {
+  right: 10rem;
+}

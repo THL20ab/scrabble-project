@@ -1,11 +1,11 @@
-export default class Player {
+import LetterRack from "./LetterRack.js";
 
+export default class Player {
+  letterRack = new LetterRack();
 
   //Constructor for player class
-  constructor(name, myGame) {
+  constructor(name) {
     this.name = name;
-    this.myGame = myGame;
-    this.currentTiles = [...this.myGame.getTiles(), ' '];
     this.points = 0;
     this.correctWordCounter = 0;
     this.attemptCounter = 0;
@@ -16,7 +16,8 @@ export default class Player {
 
   //Method to write information about player and tiles
   render() {
-
+    this.letterRack.render();
+    /*
     return `<div class="stand">
       ${this.currentTiles.map((x, i) => `<div 
           class="tile ${x.char ? '' : 'none'}"
@@ -36,6 +37,8 @@ export default class Player {
       </div>
      
       `;
+      */
   }
 
+  getName() { return this.name; }
 }

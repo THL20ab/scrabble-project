@@ -4,11 +4,13 @@
 @import 'player.css';
 @import 'rack.css';
 @import 'changer.css';
+@import 'menu.css';
 
 * {
   margin: 0;
   padding: 0;
   user-select: none;
+  box-sizing: border-box;
 }
 
 body {
@@ -48,25 +50,6 @@ footer {
   font-size: small;
 }
 
-#skipButton button{
-  right: 10rem;
-}
-#breakButton button{
-  opacity: 0.5;
-  right: 5rem;
-}
-
-#breakButton:hover{
-  opacity: 1;
-  background-color:red;
-  border: 1px solid red;
-  color: white;
-}
-
-#checkWordButton button{
-  right: 18rem;
-}
-
 #players {
   position: absolute;
   top: 10vh;
@@ -94,8 +77,6 @@ footer {
   font-size: 3.5vh;
 }
 
-
-
 .tile span {
   position: absolute;
   font-size: 1.5vh;
@@ -111,8 +92,4 @@ footer {
 .fas{
   color: rgb(33, 57, 81);
 
-}
-
-#changeTiles #changeTilesSquare.hover {
-  background-color: rgb(33, 57, 81);
 }

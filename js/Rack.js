@@ -1,7 +1,7 @@
 export default class Rack {
   tiles = [];
 
-  render() {
-    $('game player').append('<rack></rack>');
+  render(pointer) {
+    pointer.append('<rack></rack>');
   }
 }

@@ -2,11 +2,13 @@ import Board from "./Board.js";
 import TileBag from "./TileBag.js";
 import TileChanger from "./TileChanger.js";
 import Player from "./Player.js";
+import Menu from "./Menu.js";
 
 export default class Game {
   board = new Board();
   bag = new TileBag();
   changer = new TileChanger();
+  menu = new Menu();
   players = [];
   running = false;
 
@@ -30,6 +32,7 @@ export default class Game {
     this.board.render();
     this.currentPlayer.render();
     this.changer.render();
+    this.menu.render();
     /*
     $players.append(this.currentPlayer.render());
     if (this.tiles.length < 7) {

@@ -5,9 +5,9 @@ export default class Board {
 
   render() {
     $('board').remove();
-
     let board = this.getBoard();
     let $board = $('<board></board>');
+    $board.hide();
     let id = 0;
     $board.html(
       board.flat().map(x => `
@@ -18,6 +18,7 @@ export default class Board {
     );
 
     $('game left').append($board);
+    $board.fadeIn(1000);
     console.log(board);
   }
 

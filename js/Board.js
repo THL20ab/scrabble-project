@@ -4,10 +4,10 @@ export default class Board {
   }
 
   render() {
-    $('#board').remove();
+    $('board').remove();
 
     let board = this.getBoard();
-    let $board = $('<div id="board"></div>');
+    let $board = $('<board></board>');
     let id = 0;
     $board.html(
       board.flat().map(x => `
@@ -17,7 +17,7 @@ export default class Board {
       `)
     );
 
-    $('#gamePage').append($board);
+    $('game left').append($board);
     console.log(board);
   }
 

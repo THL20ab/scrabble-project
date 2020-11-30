@@ -1,7 +1,7 @@
-import LetterRack from "./LetterRack.js";
+import Rack from "./Rack.js";
 
 export default class Player {
-  letterRack = new LetterRack();
+  rack = new Rack();
 
   //Constructor for player class
   constructor(name) {
@@ -16,7 +16,8 @@ export default class Player {
 
   //Method to write information about player and tiles
   render() {
-    this.letterRack.render();
+    $('game right').append(`<player></player>`);
+    this.rack.render();
     /*
     return `<div class="stand">
       ${this.currentTiles.map((x, i) => `<div 

@@ -1,10 +1,19 @@
-#gamePage {
-  margin-top: 37px;
-  margin-bottom: 19.5px;
-  font-family: Arial;
+game {
+  float: left;
+  width: 100%;
 }
 
-#gamePage button {
+game left {
+  float: left;
+  width: 50%;
+}
+
+game right {
+  float: right;
+  width: 50%;
+}
+
+game button {
   color: white;
   background-color: black;
   cursor: pointer;
@@ -20,6 +29,6 @@
   bottom: 8rem;
 }
 
-#gamePage .buttons {
+game .buttons {
   right: 10rem;
 }

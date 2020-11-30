@@ -1,20 +1,22 @@
-#startPage {
-  margin: 90px auto;
+start {
+  float: left;
+  width: 100%;
 }
 
-#namePlayers {
-  display: relative;
-  margin: 0 auto;
-  margin-top: 20vh;
+start form {
+  margin: 90px auto;
+  margin-top: 10vh;
+  width: 100vh;
   text-align: center;
 }
 
-#namePlayers div{
-  margin: 3vh 10vw;
+start form div{
+  display: block;
+  padding: 1vh;
   font-family: Arial;
 }
 
-#namePlayers label span{
+start form label{
   font-size: 2.3vh;
   font-weight: bold;
   padding: 2px 1em;
@@ -23,19 +25,19 @@
   color:  #213951;
 }
 
-#namePlayers input {
+start form input {
   font-size: 2.3vh;
 }
 
-#startPage button {
-  display: inline-block;
+start button {
+  margin: 10vh auto;
+  padding: 5vh 2vh;
+  width: 40vh;
   color: white;
   background-color: #cf816b;/*#f5b880;*/
   cursor: pointer;
   border: 5px solid white;
-  border-radius: 50px;
-  margin: 10vh 10vh 0 10vh;
-  padding: 1.2em 3em;
+  border-radius: 5vh;
   font-size: 4vh;
   text-transform: uppercase;
   font-weight: bold;

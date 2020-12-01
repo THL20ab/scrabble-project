@@ -1,19 +1,25 @@
+import Tile from "./Tile.js";
+
 export default class TileBag {
-  tiles = [];
 
   constructor() {
-    this.tiles = this.createTiles();
+    this.tiles = this.getTilesFromFile();
+    console.log(this.tiles);
   }
 
-  createTiles() {
+  getTilesFromFile() {
     let tiles = [];
     $.get('tiles.txt', function (data) {
-      let content = data.split('\r').join('').split('\n').forEach(x => {
+      data.split('\r').join('').split('\n').forEach(x => {
         x = x.split(' ');
         x[0] = x[0] === '_' ? ' ' : x[0];
         // add tiles to this.tiles
         while (x[2]--) {
-          tiles.push({ char: x[0], points: +x[1] })
+          let char = x[0];
+          let points = +x[1];
+          let tile = new Tile(char, points);
+
+          tiles.push(tile);
         }
       });
     });
@@ -21,6 +27,4 @@ export default class TileBag {
   }
 
   shuffleRandom() { this.tiles.sort(() => Math.random() - 0.5); }
-
-  getTiles() { return this.tiles; }
 }

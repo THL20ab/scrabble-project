@@ -12,9 +12,8 @@ export default class Game {
   players = [];
   running = false;
 
-  constructor() { this.init(); }
-
   init() {
+    this.bag.init();
     $('start').hide();
     this.start();
   }
